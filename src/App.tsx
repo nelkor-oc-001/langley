@@ -1,9 +1,6 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { Layout } from './ui/Layout'
-
-function Setup() {
-  return <div className="page-setup">Setup</div>
-}
+import { SetupScreen } from './setup'
 
 function Training() {
   return <div className="page-training">Training</div>
@@ -14,7 +11,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route element={<Layout />}>
-          <Route path="/setup" element={<Setup />} />
+          <Route path="/" element={<Navigate to="/setup" replace />} />
+          <Route path="/setup" element={<SetupScreen />} />
           <Route path="/training" element={<Training />} />
         </Route>
       </Routes>
