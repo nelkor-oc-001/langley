@@ -56,9 +56,9 @@ export function Card({
 
     if (Math.abs(delta) > SWIPE_THRESHOLD) {
       if (delta < 0) {
-        onSwipeRight()
-      } else {
         onSwipeLeft()
+      } else {
+        onSwipeRight()
       }
     } else if (!hasDragged.current) {
       onFlip()
