@@ -421,8 +421,9 @@
 .training-hints {
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  padding: 0 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
 }
 
 .training-hint {
@@ -431,12 +432,16 @@
   opacity: 0.6;
 }
 
+.training-hint--sep {
+  opacity: 0.3;
+}
+
 .training-hint--left {
-  text-align: left;
+  text-align: right;
 }
 
 .training-hint--right {
-  text-align: right;
+  text-align: left;
 }
 
 /* Loading & error */
@@ -457,4 +462,61 @@
   border-top-color: var(--accent);
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
+}
+
+/* ── Mobile responsiveness ── */
+
+@media (max-width: 480px) {
+  .training-container {
+    padding: 16px 12px;
+    gap: 16px;
+  }
+
+  .training-cards {
+    height: 220px;
+  }
+
+  .training-card__word {
+    font-size: 28px;
+  }
+
+  .training-card__word--native {
+    font-size: 24px;
+  }
+
+  .training-card__hint {
+    font-size: 11px;
+  }
+
+  .training-card__face {
+    padding: 16px;
+    gap: 10px;
+  }
+
+  .training-hints {
+    gap: 8px;
+  }
+
+  .training-hint {
+    font-size: 12px;
+  }
+
+  .app-header {
+    padding: 10px 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  .training-cards {
+    height: 180px;
+  }
+
+  .training-card__word {
+    font-size: 22px;
+  }
+
+  .training-card__face {
+    padding: 12px;
+    border-radius: 14px;
+  }
 }

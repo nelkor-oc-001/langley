@@ -107,8 +107,9 @@ export function TrainingScreen() {
 
         {/* Swipe hints */}
         <div className="training-hints">
-          <span className="training-hint training-hint--left">← знакомо</span>
-          <span className="training-hint training-hint--right">не закреплено →</span>
+          <span className="training-hint training-hint--left">← знаю</span>
+          <span className="training-hint training-hint--sep">·</span>
+          <span className="training-hint training-hint--right">учу →</span>
         </div>
       </div>
     </div>
